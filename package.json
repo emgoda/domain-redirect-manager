@@ -1,0 +1,38 @@
+{
+  "name": "domain-redirect-manager",
+  "version": "1.0.0",
+  "description": "一个功能完整的域名跳转管理系统，支持SSL证书自动申请、续期和域名重定向管理",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'Build completed'",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "domain",
+    "redirect", 
+    "ssl",
+    "certificate",
+    "letsencrypt",
+    "nginx",
+    "proxy",
+    "manager"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/domain-redirect-manager.git"
+  },
+  "homepage": "https://yourusername.github.io/domain-redirect-manager/",
+  "dependencies": {
+    "express": "^4.18.2",
+    "acme-client": "^5.0.0",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "gh-pages": "^6.0.0"
+  }
+}
