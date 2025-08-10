@@ -39,7 +39,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- 登录页面 -->
         <div id="loginPage" class="login-section">
             <h1>🌐 域名跳转管理系统</h1>
             <div style="max-width: 400px; margin: 0 auto;">
@@ -62,12 +61,11 @@
             </div>
         </div>
 
-        <!-- 管理界面 -->
         <div id="dashboard" class="hidden dashboard">
             <h1>🎉 系统部署成功！</h1>
             
             <div class="success">
-                <strong>✅ 恭喜！您的域名跳转管理系统已成功部署到GitHub！</strong>
+                <strong>✅ 恭喜！您的域名跳转管理系统已成功创建！</strong>
             </div>
 
             <div class="feature">
@@ -83,16 +81,11 @@
             <div class="feature">
                 <h3>🚀 下一步操作</h3>
                 <ol style="margin: 10px 0; padding-left: 20px;">
+                    <li>上传项目到GitHub</li>
                     <li>启用GitHub Pages功能</li>
                     <li>配置自定义域名（可选）</li>
                     <li>部署到服务器（完整功能）</li>
-                    <li>配置SSL证书</li>
                 </ol>
-            </div>
-
-            <div class="feature">
-                <h3>📖 使用说明</h3>
-                <p>这是演示版本，完整功能需要部署到服务器。请查看README.md了解详细配置方法。</p>
             </div>
 
             <button class="btn logout-btn" onclick="logout()">退出登录</button>
@@ -104,11 +97,6 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorDiv = document.getElementById('error');
-            
-            if (!username || !password) {
-                errorDiv.textContent = '请输入用户名和密码';
-                return;
-            }
             
             if (username === 'admin' && password === 'admin123') {
                 document.getElementById('loginPage').classList.add('hidden');
@@ -127,7 +115,6 @@
             document.getElementById('error').textContent = '';
         }
 
-        // 回车键登录
         document.addEventListener('keypress', function(e) {
             if (e.key === 'Enter' && !document.getElementById('loginPage').classList.contains('hidden')) {
                 login();

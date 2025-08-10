@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+COPY index.html /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/nginx.conf
+
+RUN mkdir -p /var/www/html/.well-known/acme-challenge
+
+EXPOSE 80 443
+
+CMD ["nginx", "-g", "daemon off;"]
